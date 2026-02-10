@@ -17,9 +17,13 @@ app.use(express.json());
 // Rutas
 app.use('/users', userRoutes);
 
+// Ruta raíz
+app.get('/', (req, res) => {
+  res.send('Servidor funcionando ✅');
+});
+
 // Middleware de errores
 app.use(errorHandler);
 
-// Servidor
-const PORT = process.env.PORT || 3000;
-module.exports = app
+// ❌ No usar listen() en Vercel
+module.exports = app;
