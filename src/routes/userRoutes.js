@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const { getUsers, saveUsers, upDateUser, deleteUser } = require('../controllers/userController');
 
+
+//logic routes
 router.get('/', getUsers);
 router.post('/', saveUsers);
 router.put('/:id', upDateUser);
