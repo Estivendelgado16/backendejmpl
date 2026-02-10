@@ -22,4 +22,4 @@ app.use(errorHandler);
 
 // Servidor
 const PORT = process.env.PORT || 3000;
-module.exports = app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));
+module.exports = app
