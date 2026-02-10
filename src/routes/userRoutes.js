@@ -4,7 +4,7 @@ const { getUsers, saveUsers, upDateUser, deleteUser } = require('../controllers/
 
 
 //logic routes
-router.get('/users', getUsers);
+router.get('/', getUsers);
 router.post('/', saveUsers);
 router.put('/:id', upDateUser);
 router.delete('/:id', deleteUser);

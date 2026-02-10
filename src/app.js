@@ -7,19 +7,19 @@ const errorHandler = require('./middlewares/errorHandler');
 
 const app = express();
 
-// connect to db
+// Conectar DB
 connectDB();
 
 // Middlewares
 app.use(cors());
 app.use(express.json());
 
-// routes
+// Rutas
 app.use('/users', userRoutes);
 
-// Middleware bugs
+// Middleware de errores
 app.use(errorHandler);
 
-// server
+// Servidor
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));
+module.exports = app.listen(PORT, () => console.log(`Servidor corriendo en http://localhost:${PORT}`));
